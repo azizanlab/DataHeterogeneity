@@ -2,7 +2,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-MESH = 0.01 #Mesh size for plotting the pdf/cdf.
+step_size = 0.01 #step_size size for plotting the pdf/cdf.
 
 def calculate_theta_h(A, m):
     '''
@@ -84,7 +84,7 @@ def get_cdf(n, p, left, right):
     :return: If theta is the smallest principal angle between two randomly selected p-dimensional subspaces of R^n,
     the cdf of (tan(theta_h))^(-2) is returned. Calculated using the formula as described in the paper.
     '''
-    x = np.arange(start=left, stop=right, step=MESH)
+    x = np.arange(start=left, stop=right, step=step_size)
     res = np.ones(x.shape[0])
     for k in range(1, p*(n - 2*p - 1)//2 + 1):
         for kappa in partitions(k, p):
@@ -102,4 +102,4 @@ def get_pdf(n, p, left, right):
     :return: Gets the pdf from the cdf of the smallest principal angle using finite differences.
     '''
     cdf = get_cdf(n, p, left, right)
-    return np.diff(cdf)/MESH
+    return np.diff(cdf)/step_size
