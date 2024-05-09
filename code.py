@@ -82,7 +82,7 @@ def get_cdf(n, p, left, right):
     :param left: Left bound for cdf calculation.
     :param right: Right bound for cdf cdlculation.
     :return: If theta is the smallest principal angle between two randomly selected p-dimensional subspaces of R^n,
-    the cdf of (tan(theta_h))^(-2) is returned. Calculated using the formula as described in the paper.
+    the cdf of (tan(theta_ij))^(-2) is returned. Calculated using the formula as described in the paper.
     '''
     x = np.arange(start=left, stop=right, step=step_size)
     res = np.ones(x.shape[0])
