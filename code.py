@@ -28,7 +28,7 @@ def partial_factorial(a, k):
     '''
     :param a: Starting number.
     :param k: Depth.
-    :return: a(a - 1)...(a - k + 1).
+    :return: a(a + 1)...(a + k - 1).
     '''
     return (np.arange(k) + a).prod()
 
