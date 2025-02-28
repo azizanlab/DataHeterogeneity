@@ -16,7 +16,7 @@ def calculate_theta_h(A, m):
     cos_theta_h = 0
     for i in range(m):
         Q, R = np.linalg.qr(A[p*i : p*(i + 1), :].T)
-        Qs. append(Q)
+        Qs.append(Q)
     for i in range(m):
         for j in range(i + 1, m):
             Sigma = np.linalg.svd(Qs[i].T@Qs[j])[1]
