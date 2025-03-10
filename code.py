@@ -23,6 +23,7 @@ def calculate_theta_h(A, m):
             cos_theta_h = max(cos_theta_h, np.max(Sigma))
     return cos_theta_h
 
+# The following four functions calculate different parts of the expression P(tan^{-2}(theta_ij) < x) in an effective manner. They are helper functions.
 
 def partial_factorial(a, k):
     '''
@@ -74,6 +75,7 @@ def partitions(n, l, I=1):
         for p in partitions(n-i, l - 1, i):
             yield p + (i,)
 
+# The following two functions are to be called to replicate the graphs from the paper (or generate more graphs with different parameters).
 
 def get_cdf(n, p, left, right):
     '''
