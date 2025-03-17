@@ -79,7 +79,7 @@ def partitions(n, l, I=1):
 
 def get_cdf(n, p, left, right):
     '''
-    :param n: The dimension of the space.
+    :param n: The dimension of the space. Has to be odd.
     :param p: The dimension of the subspace.
     :param left: Left bound for cdf calculation.
     :param right: Right bound for cdf cdlculation.
