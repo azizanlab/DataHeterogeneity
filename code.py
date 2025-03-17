@@ -80,7 +80,7 @@ def partitions(n, l, I=1):
 def get_cdf(n, p, left, right):
     '''
     :param n: The dimension of the space. Has to be odd.
-    :param p: The dimension of the subspace.
+    :param p: The dimension of the subspace. p < (n - 1)/2.
     :param left: Left bound for cdf calculation.
     :param right: Right bound for cdf cdlculation.
     :return: If theta is the smallest principal angle between two randomly selected p-dimensional subspaces of R^n,
