@@ -1,4 +1,4 @@
 # DataHeterogeneity
-The official code for "How Does Data Heterogeneity Affect the Convergence Rates of Distributed Linear System Solvers?"
+The official code for "Distributed Linear Solvers and Data Heterogeneity"
 
-This code performs the numerical calculations described in the aforementioned paper. It also contains an implementation of Algorithm I, with small changes (calculates the cosine of the angle rather than the angle itself for code brevity).
+This code performs the numerical calculations described in the aforementioned paper. Namely, it contains a simple implementation of Algorithm 4.1 (the computation of cos(\theta_H)) and the numerical calculation of all the necessary components of Equation 7.1 (the CDF of \theta_{ij}) from the Experiments section.
