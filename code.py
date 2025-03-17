@@ -97,8 +97,8 @@ def get_cdf(n, p, left, right):
 
 def get_pdf(n, p, left, right):
     '''
-    :param n: The dimension of the space.
-    :param p: The dimension of the subspace.
+    :param n: The dimension of the space. Has to be odd.
+    :param p: The dimension of the subspace. p < (n - 1)/2.
     :param left: Left bound for pdf calculation.
     :param right: Right bound for pdf cdlculation.
     :return: Gets the pdf from the cdf of the smallest principal angle using finite differences.
