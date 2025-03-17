@@ -6,12 +6,12 @@ step_size = 0.01 #step_size size for plotting the pdf/cdf.
 
 def calculate_theta_h(A, m):
     '''
-    :param A: A square nxn matrix.
-    :param m: The number of machines we are distributing the system to. For simplicity the code requires that m divides n.
-    :return: The value of cos(theta_h), where theta_h, as described in the paper, using Algorithm 1.
+    :param A: An N x n matrix. Set N = n for the usual definition of theta_h. Set N = 2m for calculating the smallest principal angle of two m-dimensional subspaces of R^n. 
+    :param m: The number of machines we are distributing the system to. For simplicity the code requires that m divides N.
+    :return: The value of cos(theta_h), where theta_h, as described in the paper, using Algorithm 4.1.
     '''
-    n = A.shape[0]
-    p = n//m
+    N = A.shape[0]
+    p = N//m
     Qs = []
     cos_theta_h = 0
     for i in range(m):
@@ -84,7 +84,7 @@ def get_cdf(n, p, left, right):
     :param left: Left bound for cdf calculation.
     :param right: Right bound for cdf cdlculation.
     :return: If theta is the smallest principal angle between two randomly selected p-dimensional subspaces of R^n,
-    the cdf of (tan(theta_ij))^(-2) is returned. Calculated using the formula as described in the paper.
+    the cdf of (tan(theta_ij))^(-2) is returned. Calculated using the formula as described in the paper (7.1).
     '''
     x = np.arange(start=left, stop=right, step=step_size)
     res = np.ones(x.shape[0])
